@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "BankAndGo_backend": {
+      "main": "src/BankAndGo_backend/main.mo",
+      "type": "motoko"
+    },
+    "BankAndGo_frontend": {
+      "dependencies": [
+        "BankAndGo_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/BankAndGo_frontend/src/index.html"
+      },
+      "source": [
+        "src/BankAndGo_frontend/assets",
+        "dist/BankAndGo_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
